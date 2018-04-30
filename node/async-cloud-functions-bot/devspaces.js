@@ -1,1 +1,1 @@
-module.exports = ['spaces/AAAAJp5q1VU'/* Hangouts Chat Dev Testing */];
+module.exports = ['spaces/INSERT_SPACEID_HERE' /* Room to be provided*/];

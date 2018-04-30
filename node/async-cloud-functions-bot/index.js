@@ -3,9 +3,7 @@ const {
  singleImageCard,
  createHeaderObject,
  createImageWidget,
- createWidgets,
- createCardObject,
- createCards
+ createWidgets
 } = require('hangouts-card-helper');
 /**
  * Description: A basic Chat Bot setup, to be used with Google Cloud Functions.
@@ -159,18 +157,20 @@ function getInteractiveCard() {
   'https://photos.app.goo.gl/5noEuKjptkjWd01n1',
   'https://photos.app.goo.gl/DRqnKP4YBO12SnLT2'
  ];
- return createCards(
-  createCardObject(
-   createHeaderObject(
-    'Which type',
-    'Click on to Choose',
-    'http://www.freepngimg.com/download/dog/9-dog-png-image-picture-download-dogs.png',
-    'IMAGE'
-   ),
+ return {
+  cards: [
+   {
+    header: createHeaderObject(
+     'Which type',
+     'Click on to Choose',
+     'http://www.freepngimg.com/download/dog/9-dog-png-image-picture-download-dogs.png',
+     'IMAGE'
+    ),
 
-   createWidgets([imageUrls.map(url => createImageWidget(url))])
-  )
- );
+    sections: createWidgets(...imageUrls.map(url => createImageWidget(url)))
+   }
+  ]
+ };
 }
 
 /**
