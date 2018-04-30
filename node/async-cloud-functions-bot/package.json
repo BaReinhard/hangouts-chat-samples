@@ -1,0 +1,15 @@
+{
+  "name": "hangouts-chatbot-template",
+  "version": "0.0.1",
+  "description": "A basic async Hangouts Chat Bot template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Brett Reinhard <breinhard@snap.com> (https://github.sc-corp.net/bareinhard/)",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "arrify": "^1.0.1",
+    "hangouts-card-helper": "0.0.9"
+  }
+}
